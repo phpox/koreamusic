@@ -20,6 +20,9 @@
 		A58717BE15C6E68E00972EC9 /* PHPOXSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */; };
 		A58717C015C6E68E00972EC9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717BF15C6E68E00972EC9 /* second.png */; };
 		A58717C215C6E68E00972EC9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717C115C6E68E00972EC9 /* second@2x.png */; };
+		A58717CA15C6E73400972EC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717C815C6E73400972EC9 /* icon.png */; };
+		A58717CB15C6E73400972EC9 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717C915C6E73400972EC9 /* icon@2x.png */; };
+		A58717CF15C6ED8B00972EC9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717CE15C6ED8B00972EC9 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,21 +30,24 @@
 		A58717A015C6E68D00972EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A58717A215C6E68D00972EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A58717A415C6E68D00972EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A58717A815C6E68D00972EC9 /* KoreaMusic-Info.plist */ = {isa = PBXFileReference; path = "KoreaMusic-Info.plist"; sourceTree = "<group>"; };
+		A58717A815C6E68D00972EC9 /* KoreaMusic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KoreaMusic-Info.plist"; sourceTree = "<group>"; };
 		A58717AA15C6E68D00972EC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A58717AC15C6E68D00972EC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A58717AE15C6E68D00972EC9 /* KoreaMusic-Prefix.pch */ = {isa = PBXFileReference; path = "KoreaMusic-Prefix.pch"; sourceTree = "<group>"; };
-		A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */ = {isa = PBXFileReference; path = PHPOXAppDelegate.h; sourceTree = "<group>"; };
+		A58717AE15C6E68D00972EC9 /* KoreaMusic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KoreaMusic-Prefix.pch"; sourceTree = "<group>"; };
+		A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHPOXAppDelegate.h; sourceTree = "<group>"; };
 		A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXAppDelegate.m; sourceTree = "<group>"; };
 		A58717B315C6E68D00972EC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */ = {isa = PBXFileReference; path = PHPOXFirstViewController.h; sourceTree = "<group>"; };
+		A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHPOXFirstViewController.h; sourceTree = "<group>"; };
 		A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXFirstViewController.m; sourceTree = "<group>"; };
 		A58717B815C6E68E00972EC9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		A58717BA15C6E68E00972EC9 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */ = {isa = PBXFileReference; path = PHPOXSecondViewController.h; sourceTree = "<group>"; };
+		A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHPOXSecondViewController.h; sourceTree = "<group>"; };
 		A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXSecondViewController.m; sourceTree = "<group>"; };
 		A58717BF15C6E68E00972EC9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A58717C115C6E68E00972EC9 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A58717C815C6E73400972EC9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A58717C915C6E73400972EC9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		A58717CE15C6ED8B00972EC9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 		A58717A615C6E68D00972EC9 /* KoreaMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A58717CE15C6ED8B00972EC9 /* Default@2x.png */,
+				A58717C815C6E73400972EC9 /* icon.png */,
+				A58717C915C6E73400972EC9 /* icon@2x.png */,
 				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
 				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
 				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
@@ -173,6 +182,9 @@
 				A58717BB15C6E68E00972EC9 /* first@2x.png in Resources */,
 				A58717C015C6E68E00972EC9 /* second.png in Resources */,
 				A58717C215C6E68E00972EC9 /* second@2x.png in Resources */,
+				A58717CA15C6E73400972EC9 /* icon.png in Resources */,
+				A58717CB15C6E73400972EC9 /* icon@2x.png in Resources */,
+				A58717CF15C6ED8B00972EC9 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
