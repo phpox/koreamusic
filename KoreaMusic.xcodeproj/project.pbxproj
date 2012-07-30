@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A015C6E68D00972EC9 /* UIKit.framework */; };
+		A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A215C6E68D00972EC9 /* Foundation.framework */; };
+		A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A415C6E68D00972EC9 /* CoreGraphics.framework */; };
+		A58717AB15C6E68D00972EC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A58717A915C6E68D00972EC9 /* InfoPlist.strings */; };
+		A58717AD15C6E68D00972EC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A58717AC15C6E68D00972EC9 /* main.m */; };
+		A58717B115C6E68D00972EC9 /* PHPOXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */; };
+		A58717B415C6E68D00972EC9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */; };
+		A58717B715C6E68D00972EC9 /* PHPOXFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */; };
+		A58717B915C6E68E00972EC9 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717B815C6E68E00972EC9 /* first.png */; };
+		A58717BB15C6E68E00972EC9 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717BA15C6E68E00972EC9 /* first@2x.png */; };
+		A58717BE15C6E68E00972EC9 /* PHPOXSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */; };
+		A58717C015C6E68E00972EC9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717BF15C6E68E00972EC9 /* second.png */; };
+		A58717C215C6E68E00972EC9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717C115C6E68E00972EC9 /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A587179C15C6E68D00972EC9 /* KoreaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58717A015C6E68D00972EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A58717A215C6E68D00972EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A58717A415C6E68D00972EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A58717A815C6E68D00972EC9 /* KoreaMusic-Info.plist */ = {isa = PBXFileReference; path = "KoreaMusic-Info.plist"; sourceTree = "<group>"; };
+		A58717AA15C6E68D00972EC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A58717AC15C6E68D00972EC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A58717AE15C6E68D00972EC9 /* KoreaMusic-Prefix.pch */ = {isa = PBXFileReference; path = "KoreaMusic-Prefix.pch"; sourceTree = "<group>"; };
+		A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */ = {isa = PBXFileReference; path = PHPOXAppDelegate.h; sourceTree = "<group>"; };
+		A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXAppDelegate.m; sourceTree = "<group>"; };
+		A58717B315C6E68D00972EC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */ = {isa = PBXFileReference; path = PHPOXFirstViewController.h; sourceTree = "<group>"; };
+		A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXFirstViewController.m; sourceTree = "<group>"; };
+		A58717B815C6E68E00972EC9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		A58717BA15C6E68E00972EC9 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */ = {isa = PBXFileReference; path = PHPOXSecondViewController.h; sourceTree = "<group>"; };
+		A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHPOXSecondViewController.m; sourceTree = "<group>"; };
+		A58717BF15C6E68E00972EC9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		A58717C115C6E68E00972EC9 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A587179915C6E68D00972EC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */,
+				A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */,
+				A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A587179115C6E68D00972EC9 = {
+			isa = PBXGroup;
+			children = (
+				A58717A615C6E68D00972EC9 /* KoreaMusic */,
+				A587179F15C6E68D00972EC9 /* Frameworks */,
+				A587179D15C6E68D00972EC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A587179D15C6E68D00972EC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A587179C15C6E68D00972EC9 /* KoreaMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A587179F15C6E68D00972EC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A58717A015C6E68D00972EC9 /* UIKit.framework */,
+				A58717A215C6E68D00972EC9 /* Foundation.framework */,
+				A58717A415C6E68D00972EC9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A58717A615C6E68D00972EC9 /* KoreaMusic */ = {
+			isa = PBXGroup;
+			children = (
+				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
+				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
+				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
+				A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */,
+				A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */,
+				A58717B815C6E68E00972EC9 /* first.png */,
+				A58717BA15C6E68E00972EC9 /* first@2x.png */,
+				A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */,
+				A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */,
+				A58717BF15C6E68E00972EC9 /* second.png */,
+				A58717C115C6E68E00972EC9 /* second@2x.png */,
+				A58717A715C6E68D00972EC9 /* Supporting Files */,
+			);
+			path = KoreaMusic;
+			sourceTree = "<group>";
+		};
+		A58717A715C6E68D00972EC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A58717A815C6E68D00972EC9 /* KoreaMusic-Info.plist */,
+				A58717A915C6E68D00972EC9 /* InfoPlist.strings */,
+				A58717AC15C6E68D00972EC9 /* main.m */,
+				A58717AE15C6E68D00972EC9 /* KoreaMusic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A587179B15C6E68D00972EC9 /* KoreaMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A58717C515C6E68E00972EC9 /* Build configuration list for PBXNativeTarget "KoreaMusic" */;
+			buildPhases = (
+				A587179815C6E68D00972EC9 /* Sources */,
+				A587179915C6E68D00972EC9 /* Frameworks */,
+				A587179A15C6E68D00972EC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoreaMusic;
+			productName = KoreaMusic;
+			productReference = A587179C15C6E68D00972EC9 /* KoreaMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A587179315C6E68D00972EC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PHPOX;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = ybnews;
+			};
+			buildConfigurationList = A587179615C6E68D00972EC9 /* Build configuration list for PBXProject "KoreaMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A587179115C6E68D00972EC9;
+			productRefGroup = A587179D15C6E68D00972EC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A587179B15C6E68D00972EC9 /* KoreaMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A587179A15C6E68D00972EC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58717AB15C6E68D00972EC9 /* InfoPlist.strings in Resources */,
+				A58717B415C6E68D00972EC9 /* MainStoryboard.storyboard in Resources */,
+				A58717B915C6E68E00972EC9 /* first.png in Resources */,
+				A58717BB15C6E68E00972EC9 /* first@2x.png in Resources */,
+				A58717C015C6E68E00972EC9 /* second.png in Resources */,
+				A58717C215C6E68E00972EC9 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A587179815C6E68D00972EC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58717AD15C6E68D00972EC9 /* main.m in Sources */,
+				A58717B115C6E68D00972EC9 /* PHPOXAppDelegate.m in Sources */,
+				A58717B715C6E68D00972EC9 /* PHPOXFirstViewController.m in Sources */,
+				A58717BE15C6E68E00972EC9 /* PHPOXSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A58717A915C6E68D00972EC9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A58717AA15C6E68D00972EC9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A58717B315C6E68D00972EC9 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A58717C315C6E68E00972EC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A58717C415C6E68E00972EC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A58717C615C6E68E00972EC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
+				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A58717C715C6E68E00972EC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
+				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A587179615C6E68D00972EC9 /* Build configuration list for PBXProject "KoreaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58717C315C6E68E00972EC9 /* Debug */,
+				A58717C415C6E68E00972EC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A58717C515C6E68E00972EC9 /* Build configuration list for PBXNativeTarget "KoreaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58717C615C6E68E00972EC9 /* Debug */,
+				A58717C715C6E68E00972EC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A587179315C6E68D00972EC9 /* Project object */;
+}
