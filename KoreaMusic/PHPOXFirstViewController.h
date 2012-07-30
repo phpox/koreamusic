@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PHPOXFirstViewController : UIViewController
-
+{
+    
+}
+@property (strong, nonatomic) NSArray *listData;
+@property (strong, nonatomic) NSArray *listDataIntro;
 @end
