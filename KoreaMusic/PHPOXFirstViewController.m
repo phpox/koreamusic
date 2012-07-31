@@ -17,6 +17,8 @@
 
 @synthesize listData;
 @synthesize listDataIntro;
+@synthesize hproseClient;
+@synthesize childController;
 
 - (void)viewDidLoad
 {
@@ -31,16 +33,18 @@
     self.listDataIntro = array1;
     
     id client = [HproseHttpClient client:@"http://pma.sutoo.com/koreamusic/hprose.php"];
-    helloClient = [[client useService:@protocol(Phpox)] retain];
+    hproseClient = [[client useService:@protocol(Phpox)] retain];
     
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
     self.listData = nil;
     self.listDataIntro = nil;
+    self.childController = nil;
+    [self setHproseClient:nil];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -84,8 +88,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int row = [indexPath row];
-    [helloClient getSongList:row selector:@selector(getUserListCallback:) delegate:self];
+    //int row = [indexPath row];
+    //[hproseClient getSongList:row selector:@selector(getUserListCallback:) delegate:self];
+    
+    if (childController == nil) {
+        childController = [[SongListViewController alloc]
+                           initWithNibName:@"SongListViewController" bundle:nil];
+    }
+    //[self.navigationController pushViewController:childController animated:YES];
+    [self.view addSubview:childController.view];
 }
 
 -(void)bkOnlineList
@@ -96,13 +107,14 @@
 
 -(void) getUserListCallback:(NSArray *)result {
     
-    barView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    /*barView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     NSMutableArray *myToolBarItems = [NSMutableArray array];
     [myToolBarItems addObject:[[UIBarButtonItem alloc] initWithTitle:@"在线音乐" style:UIBarButtonItemStylePlain target:self action:@selector(bkOnlineList)]];
     [barView setItems:myToolBarItems animated:YES];
     [self.view addSubview:barView];
     
     newView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 600) style:UITableViewStylePlain];
+    
     [self.view addSubview:newView];
     if([result count] > 0)
     {
@@ -111,8 +123,12 @@
             //NSLog(@"%@",[row objectForKey:@"name"]);
             //NSString *ids = [NSString stringWithFormat:@"%@",[row objectForKey:@"id"]];
         }
-    }
+    }*/
     //[[[UIAlertView alloc] initWithTitle:@"提示信息" message:[result description] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
 }
 
+- (void)dealloc {
+    [hproseClient release];
+    [super dealloc];
+}
 @end

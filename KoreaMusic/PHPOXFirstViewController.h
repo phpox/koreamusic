@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Hprose.h"
+#import "SongListViewController.h"
 
 @protocol Phpox
 -(oneway void) getSongList:(int)id selector:(SEL)selector delegate:(id)delegate;
@@ -15,15 +17,15 @@
 
 @interface PHPOXFirstViewController : UIViewController
 {
-    id helloClient;
     UIToolbar *barView;
     UITableView *newView;
 }
 
 @property (strong, nonatomic) NSArray *listData;
 @property (strong, nonatomic) NSArray *listDataIntro;
+@property (retain, nonatomic) IBOutlet HproseClient *hproseClient;
+@property (strong, nonatomic) SongListViewController *childController;
 
--(void) helloCallback:(NSString *)result;
 -(void)bkOnlineList;
 
 @end

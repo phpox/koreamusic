@@ -16,6 +16,8 @@
 		18C7130F15C7C3C100FC0239 /* HproseProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130215C7C3C100FC0239 /* HproseProperty.m */; };
 		18C7131015C7C3C100FC0239 /* HproseReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130415C7C3C100FC0239 /* HproseReader.m */; };
 		18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130815C7C3C100FC0239 /* HproseWriter.m */; };
+		A569325C15C83EC90082F8C2 /* SongListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A569325A15C83EC90082F8C2 /* SongListViewController.m */; };
+		A569325D15C83EC90082F8C2 /* SongListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A569325B15C83EC90082F8C2 /* SongListViewController.xib */; };
 		A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A015C6E68D00972EC9 /* UIKit.framework */; };
 		A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A215C6E68D00972EC9 /* Foundation.framework */; };
 		A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A415C6E68D00972EC9 /* CoreGraphics.framework */; };
@@ -62,6 +64,9 @@
 		18C7130615C7C3C100FC0239 /* HproseTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseTags.h; sourceTree = "<group>"; };
 		18C7130715C7C3C100FC0239 /* HproseWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseWriter.h; sourceTree = "<group>"; };
 		18C7130815C7C3C100FC0239 /* HproseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseWriter.m; sourceTree = "<group>"; };
+		A569325915C83EC90082F8C2 /* SongListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListViewController.h; sourceTree = "<group>"; };
+		A569325A15C83EC90082F8C2 /* SongListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListViewController.m; sourceTree = "<group>"; };
+		A569325B15C83EC90082F8C2 /* SongListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongListViewController.xib; sourceTree = "<group>"; };
 		A587179C15C6E68D00972EC9 /* KoreaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58717A015C6E68D00972EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A58717A215C6E68D00972EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +108,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A569325E15C84D130082F8C2 /* hprose */ = {
+			isa = PBXGroup;
+			children = (
+				18C712F115C7C3C100FC0239 /* Hprose.h */,
+				18C712F215C7C3C100FC0239 /* HproseAsyncInvoke.h */,
+				18C712F315C7C3C100FC0239 /* HproseClassManager.h */,
+				18C712F415C7C3C100FC0239 /* HproseClassManager.m */,
+				18C712F515C7C3C100FC0239 /* HproseClient.h */,
+				18C712F615C7C3C100FC0239 /* HproseClient.m */,
+				18C712F715C7C3C100FC0239 /* HproseClientProxy.h */,
+				18C712F815C7C3C100FC0239 /* HproseClientProxy.m */,
+				18C712F915C7C3C100FC0239 /* HproseConnection.h */,
+				18C712FA15C7C3C100FC0239 /* HproseException.h */,
+				18C712FB15C7C3C100FC0239 /* HproseException.m */,
+				18C712FC15C7C3C100FC0239 /* HproseHelper.h */,
+				18C712FD15C7C3C100FC0239 /* HproseHelper.m */,
+				18C712FE15C7C3C100FC0239 /* HproseHttpClient.h */,
+				18C712FF15C7C3C100FC0239 /* HproseHttpClient.m */,
+				18C7130015C7C3C100FC0239 /* HproseInvoker.h */,
+				18C7130115C7C3C100FC0239 /* HproseProperty.h */,
+				18C7130215C7C3C100FC0239 /* HproseProperty.m */,
+				18C7130315C7C3C100FC0239 /* HproseReader.h */,
+				18C7130415C7C3C100FC0239 /* HproseReader.m */,
+				18C7130515C7C3C100FC0239 /* HproseResultMode.h */,
+				18C7130615C7C3C100FC0239 /* HproseTags.h */,
+				18C7130715C7C3C100FC0239 /* HproseWriter.h */,
+				18C7130815C7C3C100FC0239 /* HproseWriter.m */,
+			);
+			name = hprose;
+			sourceTree = "<group>";
+		};
 		A587179115C6E68D00972EC9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,48 +169,28 @@
 		A58717A615C6E68D00972EC9 /* KoreaMusic */ = {
 			isa = PBXGroup;
 			children = (
-				18C712F115C7C3C100FC0239 /* Hprose.h */,
-				18C712F215C7C3C100FC0239 /* HproseAsyncInvoke.h */,
-				18C712F315C7C3C100FC0239 /* HproseClassManager.h */,
-				18C712F415C7C3C100FC0239 /* HproseClassManager.m */,
-				18C712F515C7C3C100FC0239 /* HproseClient.h */,
-				18C712F615C7C3C100FC0239 /* HproseClient.m */,
-				18C712F715C7C3C100FC0239 /* HproseClientProxy.h */,
-				18C712F815C7C3C100FC0239 /* HproseClientProxy.m */,
-				18C712F915C7C3C100FC0239 /* HproseConnection.h */,
-				18C712FA15C7C3C100FC0239 /* HproseException.h */,
-				18C712FB15C7C3C100FC0239 /* HproseException.m */,
-				18C712FC15C7C3C100FC0239 /* HproseHelper.h */,
-				18C712FD15C7C3C100FC0239 /* HproseHelper.m */,
-				18C712FE15C7C3C100FC0239 /* HproseHttpClient.h */,
-				18C712FF15C7C3C100FC0239 /* HproseHttpClient.m */,
-				18C7130015C7C3C100FC0239 /* HproseInvoker.h */,
-				18C7130115C7C3C100FC0239 /* HproseProperty.h */,
-				18C7130215C7C3C100FC0239 /* HproseProperty.m */,
-				18C7130315C7C3C100FC0239 /* HproseReader.h */,
-				18C7130415C7C3C100FC0239 /* HproseReader.m */,
-				18C7130515C7C3C100FC0239 /* HproseResultMode.h */,
-				18C7130615C7C3C100FC0239 /* HproseTags.h */,
-				18C7130715C7C3C100FC0239 /* HproseWriter.h */,
-				18C7130815C7C3C100FC0239 /* HproseWriter.m */,
-				A58717D215C707EB00972EC9 /* blue.png */,
-				A58717D315C707EB00972EC9 /* yellow.png */,
+				A569325E15C84D130082F8C2 /* hprose */,
 				A58717D015C6FDB500972EC9 /* ad@2x.png */,
+				A58717D215C707EB00972EC9 /* blue.png */,
 				A58717CE15C6ED8B00972EC9 /* Default@2x.png */,
-				A58717C815C6E73400972EC9 /* icon.png */,
-				A58717C915C6E73400972EC9 /* icon@2x.png */,
-				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
-				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
-				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
-				A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */,
-				A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */,
 				A58717B815C6E68E00972EC9 /* first.png */,
 				A58717BA15C6E68E00972EC9 /* first@2x.png */,
+				A58717C815C6E73400972EC9 /* icon.png */,
+				A58717C915C6E73400972EC9 /* icon@2x.png */,
+				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
+				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
+				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
+				A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */,
+				A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */,
 				A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */,
 				A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */,
 				A58717BF15C6E68E00972EC9 /* second.png */,
 				A58717C115C6E68E00972EC9 /* second@2x.png */,
+				A569325915C83EC90082F8C2 /* SongListViewController.h */,
+				A569325A15C83EC90082F8C2 /* SongListViewController.m */,
+				A569325B15C83EC90082F8C2 /* SongListViewController.xib */,
 				A58717A715C6E68D00972EC9 /* Supporting Files */,
+				A58717D315C707EB00972EC9 /* yellow.png */,
 			);
 			path = KoreaMusic;
 			sourceTree = "<group>";
@@ -255,6 +271,7 @@
 				A58717D115C6FDB500972EC9 /* ad@2x.png in Resources */,
 				A58717D415C707EB00972EC9 /* blue.png in Resources */,
 				A58717D515C707EB00972EC9 /* yellow.png in Resources */,
+				A569325D15C83EC90082F8C2 /* SongListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +311,7 @@
 				18C7130F15C7C3C100FC0239 /* HproseProperty.m in Sources */,
 				18C7131015C7C3C100FC0239 /* HproseReader.m in Sources */,
 				18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */,
+				A569325C15C83EC90082F8C2 /* SongListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
