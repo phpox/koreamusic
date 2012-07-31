@@ -12,6 +12,7 @@
 
 @protocol Phpox
 -(oneway void) getSongList:(int)id selector:(SEL)selector delegate:(id)delegate;
+-(oneway void) getSongUrl:(int)id selector:(SEL)selector delegate:(id)delegate;
 @end
 
 
@@ -23,8 +24,10 @@
 
 @property (strong, nonatomic) NSArray *listData;
 @property (strong, nonatomic) NSArray *listDataIntro;
-@property (retain, nonatomic) IBOutlet HproseClient *hproseClient;
+@property (retain, nonatomic) IBOutlet HproseClient *hpClient;
 @property (strong, nonatomic) SongListViewController *childController;
+@property (retain, nonatomic) NSArray *songarr;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 -(void)bkOnlineList;
 

@@ -18,6 +18,7 @@
 		18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130815C7C3C100FC0239 /* HproseWriter.m */; };
 		A569325C15C83EC90082F8C2 /* SongListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A569325A15C83EC90082F8C2 /* SongListViewController.m */; };
 		A569325D15C83EC90082F8C2 /* SongListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A569325B15C83EC90082F8C2 /* SongListViewController.xib */; };
+		A569326015C850290082F8C2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A569325F15C850290082F8C2 /* MediaPlayer.framework */; };
 		A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A015C6E68D00972EC9 /* UIKit.framework */; };
 		A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A215C6E68D00972EC9 /* Foundation.framework */; };
 		A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A415C6E68D00972EC9 /* CoreGraphics.framework */; };
@@ -67,6 +68,7 @@
 		A569325915C83EC90082F8C2 /* SongListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListViewController.h; sourceTree = "<group>"; };
 		A569325A15C83EC90082F8C2 /* SongListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListViewController.m; sourceTree = "<group>"; };
 		A569325B15C83EC90082F8C2 /* SongListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongListViewController.xib; sourceTree = "<group>"; };
+		A569325F15C850290082F8C2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A587179C15C6E68D00972EC9 /* KoreaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58717A015C6E68D00972EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A58717A215C6E68D00972EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A569326015C850290082F8C2 /* MediaPlayer.framework in Frameworks */,
 				A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */,
 				A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */,
 				A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */,
@@ -142,6 +145,7 @@
 		A587179115C6E68D00972EC9 = {
 			isa = PBXGroup;
 			children = (
+				A569325F15C850290082F8C2 /* MediaPlayer.framework */,
 				A58717A615C6E68D00972EC9 /* KoreaMusic */,
 				A587179F15C6E68D00972EC9 /* Frameworks */,
 				A587179D15C6E68D00972EC9 /* Products */,

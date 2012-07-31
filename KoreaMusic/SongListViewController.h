@@ -12,12 +12,15 @@
 
 @protocol Phpox
 -(oneway void) getSongList:(int)id selector:(SEL)selector delegate:(id)delegate;
+-(oneway void) getSongUrl:(int)id selector:(SEL)selector delegate:(id)delegate;
 @end
 
 @interface SongListViewController : UIViewController
 {
-    NSArray *songarr;
+    
 }
 @property (retain, nonatomic) IBOutlet HproseClient *hpClient;
+@property (retain, nonatomic) IBOutlet NSArray *songarr;
+- (IBAction)bkMain:(id)sender;
 
 @end

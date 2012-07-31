@@ -14,6 +14,7 @@
 
 @implementation SongListViewController
 @synthesize hpClient;
+@synthesize songarr;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,6 @@
     // Do any additional setup after loading the view from its nib.
     id client = [HproseHttpClient client:@"http://pma.sutoo.com/koreamusic/hprose.php"];
     hpClient = [[client useService:@protocol(Phpox)] retain];
-    [hpClient getSongList:1 selector:@selector(getUserListCallback:) delegate:self];
 }
 
 -(void) getUserListCallback:(NSArray *)result
@@ -97,14 +97,26 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * myURL = [NSString stringWithFormat:@"http://pma.sutoo.com/koreamusic/music/1.mp3"];
-    MPMoviePlayerController *moviePlayer = [ [ MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:myURL]];
+    NSUInteger row = [indexPath row];
+    [hpClient getSongUrl:row+1 selector:@selector(playSong:) delegate:self];
+}
+
+-(void)playSong:(NSString *)url
+{
+    MPMoviePlayerController *moviePlayer = [ [ MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
     [moviePlayer play];
+}
+
+- (IBAction)bkMain:(id)sender
+{
+    [self.view removeFromSuperview];
 }
 
 
 - (void)dealloc {
     [hpClient release];
+    //[songarr release];
     [super dealloc];
 }
+
 @end

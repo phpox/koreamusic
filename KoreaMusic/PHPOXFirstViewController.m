@@ -17,8 +17,10 @@
 
 @synthesize listData;
 @synthesize listDataIntro;
-@synthesize hproseClient;
+@synthesize hpClient;
 @synthesize childController;
+@synthesize songarr;
+@synthesize loading;
 
 - (void)viewDidLoad
 {
@@ -33,7 +35,7 @@
     self.listDataIntro = array1;
     
     id client = [HproseHttpClient client:@"http://pma.sutoo.com/koreamusic/hprose.php"];
-    hproseClient = [[client useService:@protocol(Phpox)] retain];
+    hpClient = [[client useService:@protocol(Phpox)] retain];
     
 }
 
@@ -42,7 +44,8 @@
     self.listData = nil;
     self.listDataIntro = nil;
     self.childController = nil;
-    [self setHproseClient:nil];
+    [self setHpClient:nil];
+    [self setLoading:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -88,15 +91,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //int row = [indexPath row];
-    //[hproseClient getSongList:row selector:@selector(getUserListCallback:) delegate:self];
-    
-    if (childController == nil) {
-        childController = [[SongListViewController alloc]
-                           initWithNibName:@"SongListViewController" bundle:nil];
-    }
-    //[self.navigationController pushViewController:childController animated:YES];
-    [self.view addSubview:childController.view];
+    [loading startAnimating];
+    [hpClient getSongList:1 selector:@selector(getUserListCallback:) delegate:self];
 }
 
 -(void)bkOnlineList
@@ -107,28 +103,29 @@
 
 -(void) getUserListCallback:(NSArray *)result {
     
-    /*barView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    NSMutableArray *myToolBarItems = [NSMutableArray array];
-    [myToolBarItems addObject:[[UIBarButtonItem alloc] initWithTitle:@"在线音乐" style:UIBarButtonItemStylePlain target:self action:@selector(bkOnlineList)]];
-    [barView setItems:myToolBarItems animated:YES];
-    [self.view addSubview:barView];
-    
-    newView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 600) style:UITableViewStylePlain];
-    
-    [self.view addSubview:newView];
+    if (childController == nil) {
+        childController = [[SongListViewController alloc]
+                           initWithNibName:@"SongListViewController" bundle:nil];
+        childController.songarr = result;
+    }
+    [self.view addSubview:childController.view];
     if([result count] > 0)
     {
         for (NSDictionary * row in result)
         {
-            //NSLog(@"%@",[row objectForKey:@"name"]);
+            NSLog(@"%@",[row objectForKey:@"name"]);
             //NSString *ids = [NSString stringWithFormat:@"%@",[row objectForKey:@"id"]];
         }
-    }*/
+        songarr = result;
+    }
+    [loading stopAnimating];
     //[[[UIAlertView alloc] initWithTitle:@"提示信息" message:[result description] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
 }
 
 - (void)dealloc {
-    [hproseClient release];
+    [hpClient release];
+    //[songarr release];
+    [loading release];
     [super dealloc];
 }
 @end

@@ -48,6 +48,10 @@
                                             <outlet property="delegate" destination="2" id="Yub-pE-cX1"/>
                                         </connections>
                                     </tableView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="Ygr-9i-M7j">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -58,7 +62,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="hproseClient" destination="jJd-g0-XFv" id="eZi-45-sdd"/>
+                        <outlet property="hpClient" destination="jJd-g0-XFv" id="Zid-kI-Fr5"/>
+                        <outlet property="loading" destination="Ygr-9i-M7j" id="RoO-Bf-8cN"/>
                     </connections>
                 </viewController>
                 <customObject id="jJd-g0-XFv" customClass="HproseClient"/>
@@ -128,8 +133,8 @@
         <class className="PHPOXFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PHPOXFirstViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="hproseClient" candidateClass="HproseClient"/>
-                <relationship kind="outlet" name="navigationController" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="hpClient" candidateClass="HproseClient"/>
+                <relationship kind="outlet" name="loading" candidateClass="UIActivityIndicatorView"/>
             </relationships>
         </class>
         <class className="PHPOXSecondViewController" superclassName="UIViewController">
