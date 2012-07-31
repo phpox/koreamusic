@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C7130915C7C3C100FC0239 /* HproseClassManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712F415C7C3C100FC0239 /* HproseClassManager.m */; };
+		18C7130A15C7C3C100FC0239 /* HproseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712F615C7C3C100FC0239 /* HproseClient.m */; };
+		18C7130B15C7C3C100FC0239 /* HproseClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712F815C7C3C100FC0239 /* HproseClientProxy.m */; };
+		18C7130C15C7C3C100FC0239 /* HproseException.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712FB15C7C3C100FC0239 /* HproseException.m */; };
+		18C7130D15C7C3C100FC0239 /* HproseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712FD15C7C3C100FC0239 /* HproseHelper.m */; };
+		18C7130E15C7C3C100FC0239 /* HproseHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C712FF15C7C3C100FC0239 /* HproseHttpClient.m */; };
+		18C7130F15C7C3C100FC0239 /* HproseProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130215C7C3C100FC0239 /* HproseProperty.m */; };
+		18C7131015C7C3C100FC0239 /* HproseReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130415C7C3C100FC0239 /* HproseReader.m */; };
+		18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7130815C7C3C100FC0239 /* HproseWriter.m */; };
 		A58717A115C6E68D00972EC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A015C6E68D00972EC9 /* UIKit.framework */; };
 		A58717A315C6E68D00972EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A215C6E68D00972EC9 /* Foundation.framework */; };
 		A58717A515C6E68D00972EC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58717A415C6E68D00972EC9 /* CoreGraphics.framework */; };
@@ -29,6 +38,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18C712F115C7C3C100FC0239 /* Hprose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hprose.h; sourceTree = "<group>"; };
+		18C712F215C7C3C100FC0239 /* HproseAsyncInvoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseAsyncInvoke.h; sourceTree = "<group>"; };
+		18C712F315C7C3C100FC0239 /* HproseClassManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseClassManager.h; sourceTree = "<group>"; };
+		18C712F415C7C3C100FC0239 /* HproseClassManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseClassManager.m; sourceTree = "<group>"; };
+		18C712F515C7C3C100FC0239 /* HproseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseClient.h; sourceTree = "<group>"; };
+		18C712F615C7C3C100FC0239 /* HproseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseClient.m; sourceTree = "<group>"; };
+		18C712F715C7C3C100FC0239 /* HproseClientProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseClientProxy.h; sourceTree = "<group>"; };
+		18C712F815C7C3C100FC0239 /* HproseClientProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseClientProxy.m; sourceTree = "<group>"; };
+		18C712F915C7C3C100FC0239 /* HproseConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseConnection.h; sourceTree = "<group>"; };
+		18C712FA15C7C3C100FC0239 /* HproseException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseException.h; sourceTree = "<group>"; };
+		18C712FB15C7C3C100FC0239 /* HproseException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseException.m; sourceTree = "<group>"; };
+		18C712FC15C7C3C100FC0239 /* HproseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseHelper.h; sourceTree = "<group>"; };
+		18C712FD15C7C3C100FC0239 /* HproseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseHelper.m; sourceTree = "<group>"; };
+		18C712FE15C7C3C100FC0239 /* HproseHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseHttpClient.h; sourceTree = "<group>"; };
+		18C712FF15C7C3C100FC0239 /* HproseHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseHttpClient.m; sourceTree = "<group>"; };
+		18C7130015C7C3C100FC0239 /* HproseInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseInvoker.h; sourceTree = "<group>"; };
+		18C7130115C7C3C100FC0239 /* HproseProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseProperty.h; sourceTree = "<group>"; };
+		18C7130215C7C3C100FC0239 /* HproseProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseProperty.m; sourceTree = "<group>"; };
+		18C7130315C7C3C100FC0239 /* HproseReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseReader.h; sourceTree = "<group>"; };
+		18C7130415C7C3C100FC0239 /* HproseReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseReader.m; sourceTree = "<group>"; };
+		18C7130515C7C3C100FC0239 /* HproseResultMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseResultMode.h; sourceTree = "<group>"; };
+		18C7130615C7C3C100FC0239 /* HproseTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseTags.h; sourceTree = "<group>"; };
+		18C7130715C7C3C100FC0239 /* HproseWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HproseWriter.h; sourceTree = "<group>"; };
+		18C7130815C7C3C100FC0239 /* HproseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HproseWriter.m; sourceTree = "<group>"; };
 		A587179C15C6E68D00972EC9 /* KoreaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58717A015C6E68D00972EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A58717A215C6E68D00972EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +133,30 @@
 		A58717A615C6E68D00972EC9 /* KoreaMusic */ = {
 			isa = PBXGroup;
 			children = (
+				18C712F115C7C3C100FC0239 /* Hprose.h */,
+				18C712F215C7C3C100FC0239 /* HproseAsyncInvoke.h */,
+				18C712F315C7C3C100FC0239 /* HproseClassManager.h */,
+				18C712F415C7C3C100FC0239 /* HproseClassManager.m */,
+				18C712F515C7C3C100FC0239 /* HproseClient.h */,
+				18C712F615C7C3C100FC0239 /* HproseClient.m */,
+				18C712F715C7C3C100FC0239 /* HproseClientProxy.h */,
+				18C712F815C7C3C100FC0239 /* HproseClientProxy.m */,
+				18C712F915C7C3C100FC0239 /* HproseConnection.h */,
+				18C712FA15C7C3C100FC0239 /* HproseException.h */,
+				18C712FB15C7C3C100FC0239 /* HproseException.m */,
+				18C712FC15C7C3C100FC0239 /* HproseHelper.h */,
+				18C712FD15C7C3C100FC0239 /* HproseHelper.m */,
+				18C712FE15C7C3C100FC0239 /* HproseHttpClient.h */,
+				18C712FF15C7C3C100FC0239 /* HproseHttpClient.m */,
+				18C7130015C7C3C100FC0239 /* HproseInvoker.h */,
+				18C7130115C7C3C100FC0239 /* HproseProperty.h */,
+				18C7130215C7C3C100FC0239 /* HproseProperty.m */,
+				18C7130315C7C3C100FC0239 /* HproseReader.h */,
+				18C7130415C7C3C100FC0239 /* HproseReader.m */,
+				18C7130515C7C3C100FC0239 /* HproseResultMode.h */,
+				18C7130615C7C3C100FC0239 /* HproseTags.h */,
+				18C7130715C7C3C100FC0239 /* HproseWriter.h */,
+				18C7130815C7C3C100FC0239 /* HproseWriter.m */,
 				A58717D215C707EB00972EC9 /* blue.png */,
 				A58717D315C707EB00972EC9 /* yellow.png */,
 				A58717D015C6FDB500972EC9 /* ad@2x.png */,
@@ -228,6 +285,15 @@
 				A58717B115C6E68D00972EC9 /* PHPOXAppDelegate.m in Sources */,
 				A58717B715C6E68D00972EC9 /* PHPOXFirstViewController.m in Sources */,
 				A58717BE15C6E68E00972EC9 /* PHPOXSecondViewController.m in Sources */,
+				18C7130915C7C3C100FC0239 /* HproseClassManager.m in Sources */,
+				18C7130A15C7C3C100FC0239 /* HproseClient.m in Sources */,
+				18C7130B15C7C3C100FC0239 /* HproseClientProxy.m in Sources */,
+				18C7130C15C7C3C100FC0239 /* HproseException.m in Sources */,
+				18C7130D15C7C3C100FC0239 /* HproseHelper.m in Sources */,
+				18C7130E15C7C3C100FC0239 /* HproseHttpClient.m in Sources */,
+				18C7130F15C7C3C100FC0239 /* HproseProperty.m in Sources */,
+				18C7131015C7C3C100FC0239 /* HproseReader.m in Sources */,
+				18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +367,7 @@
 		A58717C615C6E68E00972EC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
 				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";
@@ -312,6 +379,7 @@
 		A58717C715C6E68E00972EC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
 				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";

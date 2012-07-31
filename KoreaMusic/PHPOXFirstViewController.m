@@ -7,6 +7,7 @@
 //
 
 #import "PHPOXFirstViewController.h"
+#import "Hprose.h"
 
 @interface PHPOXFirstViewController ()
 
@@ -28,6 +29,10 @@
     NSArray *array1 = [[NSArray alloc] initWithObjects:@"按歌曲发行时间排序", @"按歌曲点播率排序",
                       @"小编推荐的歌曲", @"随机选出一些歌曲",@"韩国影视经典OST", nil];
     self.listDataIntro = array1;
+    
+    id client = [HproseHttpClient client:@"http://pma.sutoo.com/koreamusic/hprose.php"];
+    helloClient = [[client useService:@protocol(Phpox)] retain];
+    
 }
 
 - (void)viewDidUnload
@@ -75,6 +80,39 @@
     
     cell.detailTextLabel.text = [listDataIntro objectAtIndex:row];
 	return cell; 
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int row = [indexPath row];
+    [helloClient getSongList:row selector:@selector(getUserListCallback:) delegate:self];
+}
+
+-(void)bkOnlineList
+{
+    [barView removeFromSuperview];
+    [newView removeFromSuperview];
+}
+
+-(void) getUserListCallback:(NSArray *)result {
+    
+    barView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    NSMutableArray *myToolBarItems = [NSMutableArray array];
+    [myToolBarItems addObject:[[UIBarButtonItem alloc] initWithTitle:@"在线音乐" style:UIBarButtonItemStylePlain target:self action:@selector(bkOnlineList)]];
+    [barView setItems:myToolBarItems animated:YES];
+    [self.view addSubview:barView];
+    
+    newView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 600) style:UITableViewStylePlain];
+    [self.view addSubview:newView];
+    if([result count] > 0)
+    {
+        for (NSDictionary * row in result)
+        {
+            //NSLog(@"%@",[row objectForKey:@"name"]);
+            //NSString *ids = [NSString stringWithFormat:@"%@",[row objectForKey:@"id"]];
+        }
+    }
+    //[[[UIAlertView alloc] initWithTitle:@"提示信息" message:[result description] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
 }
 
 @end

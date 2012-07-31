@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface PHPOXAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+
 
 @end
