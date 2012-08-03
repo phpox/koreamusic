@@ -15,6 +15,7 @@
 @implementation SongListViewController
 @synthesize hpClient;
 @synthesize songarr;
+@synthesize playerController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +51,7 @@
 - (void)viewDidUnload
 {
     [self setHpClient:nil];
+    self.playerController = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -98,13 +100,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row = [indexPath row];
-    [hpClient getSongUrl:row+1 selector:@selector(playSong:) delegate:self];
+    [hpClient getSongInfo:row+1 selector:@selector(playSong:) delegate:self];
 }
 
--(void)playSong:(NSString *)url
+-(void)playSong:(NSMutableDictionary *)result
 {
-    MPMoviePlayerController *moviePlayer = [ [ MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
-    [moviePlayer play];
+    //MPMoviePlayerController *moviePlayer = [ [ MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
+    //[moviePlayer play];
+    if (playerController == nil) {
+        playerController = [[PlayerViewController alloc]
+                           initWithNibName:@"PlayerViewController" bundle:nil];
+    }
+    [playerController.songarr removeAllObjects];
+    playerController.songarr = result;
+    [self.view addSubview:playerController.view];
 }
 
 - (IBAction)bkMain:(id)sender

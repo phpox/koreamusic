@@ -38,6 +38,8 @@
 		A58717D115C6FDB500972EC9 /* ad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717D015C6FDB500972EC9 /* ad@2x.png */; };
 		A58717D415C707EB00972EC9 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717D215C707EB00972EC9 /* blue.png */; };
 		A58717D515C707EB00972EC9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717D315C707EB00972EC9 /* yellow.png */; };
+		A5BA8A4715CC322F003F76F2 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */; };
+		A5BA8A4815CC322F003F76F2 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,9 @@
 		A58717D015C6FDB500972EC9 /* ad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ad@2x.png"; sourceTree = "<group>"; };
 		A58717D215C707EB00972EC9 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		A58717D315C707EB00972EC9 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		A5BA8A4415CC322F003F76F2 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +200,9 @@
 				A569325B15C83EC90082F8C2 /* SongListViewController.xib */,
 				A58717A715C6E68D00972EC9 /* Supporting Files */,
 				A58717D315C707EB00972EC9 /* yellow.png */,
+				A5BA8A4415CC322F003F76F2 /* PlayerViewController.h */,
+				A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */,
+				A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */,
 			);
 			path = KoreaMusic;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 				A58717D415C707EB00972EC9 /* blue.png in Resources */,
 				A58717D515C707EB00972EC9 /* yellow.png in Resources */,
 				A569325D15C83EC90082F8C2 /* SongListViewController.xib in Resources */,
+				A5BA8A4815CC322F003F76F2 /* PlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +325,7 @@
 				18C7131015C7C3C100FC0239 /* HproseReader.m in Sources */,
 				18C7131115C7C3C100FC0239 /* HproseWriter.m in Sources */,
 				A569325C15C83EC90082F8C2 /* SongListViewController.m in Sources */,
+				A5BA8A4715CC322F003F76F2 /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
