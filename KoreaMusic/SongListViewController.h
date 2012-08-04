@@ -21,9 +21,11 @@
     
 }
 @property (retain, nonatomic) IBOutlet HproseClient *hpClient;
-@property (retain, nonatomic) IBOutlet NSArray *songarr;
+@property (retain, nonatomic) NSArray *songarr;
 @property (strong, nonatomic) PlayerViewController *playerController;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+@property (retain, nonatomic) IBOutlet UITableView *tbSongList;
 - (IBAction)bkMain:(id)sender;
 - (IBAction)showPlayer:(id)sender;
+-(void)initSongList:(NSArray *)result;
 @end

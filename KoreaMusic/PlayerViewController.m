@@ -21,11 +21,11 @@
 @synthesize songarr;
 @synthesize lblSongName;
 @synthesize lblSingerName;
-@synthesize txtLrc;
 @synthesize downloadSourceField;
 @synthesize positionLabel;
 @synthesize progressSlider;
 @synthesize button;
+@synthesize lrcView;
 @synthesize volumeSlider;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -77,7 +77,6 @@
     
     lblSongName.text = [songarr objectForKey:@"name"];
     lblSingerName.text = [songarr objectForKey:@"singer"];
-    txtLrc.text = [songarr objectForKey:@"lrc"];
     
     MPVolumeView *volumeView = [[[MPVolumeView alloc] initWithFrame:volumeSlider.bounds] autorelease];
 	[volumeSlider addSubview:volumeView];
@@ -87,6 +86,15 @@
     [streamer stop];
     [self createStreamer];
     [self setButtonImageNamed:@"btn_loading"];
+    islrc = NO;
+    LRCParser *tmpParser = [[LRCParser alloc] init];
+	islrc = [tmpParser parseLRC:[songarr objectForKey:@"lrc"]];
+    if(islrc == YES)
+    {
+        lecLayer = [[LRCView alloc] initWithFrame:CGRectMake(0, 0, 320, 270)];
+        [lecLayer setLineLayers:tmpParser.lrcArray];
+        [self.lrcView.layer addSublayer:lecLayer];
+    }
     [streamer start];
 }
 
@@ -102,13 +110,13 @@
 {
     [self setLblSongName:nil];
     [self setLblSingerName:nil];
-    [self setTxtLrc:nil];
     [self setDownloadSourceField:nil];
     [self setPositionLabel:nil];
     [self setProgressSlider:nil];
     [self setButton:nil];
     [self setVolumeSlider:nil];
     [self setButton:nil];
+    [self setLrcView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -204,6 +212,10 @@
               (int)floor(duration/60),(int)duration % 60]];
 			[progressSlider setEnabled:YES];
 			[progressSlider setValue:100 * progress / duration];
+            if(islrc == YES)
+            {
+                [lecLayer updateLRCLineLayer:(int)(progress)];
+            }
 		}
 		else
 		{
@@ -322,10 +334,6 @@
 {
 	if ([currentImageName isEqual:@"btn_play.png"])
 	{
-		[downloadSourceField resignFirstResponder];
-		
-		[self createStreamer];
-		[self setButtonImageNamed:@"btn_loading"];
 		[streamer start];
 	}
 	else
@@ -345,7 +353,6 @@
 {
     [lblSongName release];
     [lblSingerName release];
-    [txtLrc release];
     [downloadSourceField release];
     [self destroyStreamer];
 	if (progressUpdateTimer)
@@ -358,10 +365,12 @@
     [button release];
     [volumeSlider release];
     [button release];
+    [lrcView release];
     [super dealloc];
 }
 - (IBAction)bkSongList:(id)sender
 {
+    [lecLayer removeFromSuperlayer];
     [self.view removeFromSuperview];
 }
 @end

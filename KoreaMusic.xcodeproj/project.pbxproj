@@ -54,6 +54,9 @@
 		A58717D515C707EB00972EC9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = A58717D315C707EB00972EC9 /* yellow.png */; };
 		A5BA8A4715CC322F003F76F2 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */; };
 		A5BA8A4815CC322F003F76F2 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */; };
+		A5BC05F915CDA7F000915367 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC05F815CDA7F000915367 /* CoreText.framework */; };
+		A5BC05FE15CDAAEB00915367 /* LRCLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BC05FB15CDAAEB00915367 /* LRCLayer.m */; };
+		A5BC05FF15CDAAEB00915367 /* LRCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BC05FD15CDAAEB00915367 /* LRCParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +132,11 @@
 		A5BA8A4415CC322F003F76F2 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
+		A5BC05F815CDA7F000915367 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A5BC05FA15CDAAEB00915367 /* LRCLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCLayer.h; sourceTree = "<group>"; };
+		A5BC05FB15CDAAEB00915367 /* LRCLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCLayer.m; sourceTree = "<group>"; };
+		A5BC05FC15CDAAEB00915367 /* LRCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCParser.h; sourceTree = "<group>"; };
+		A5BC05FD15CDAAEB00915367 /* LRCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BC05F915CDA7F000915367 /* CoreText.framework in Frameworks */,
 				A51EF63315CD24B500BC54FC /* MediaPlayer.framework in Frameworks */,
 				A51EF63215CD247900BC54FC /* QuartzCore.framework in Frameworks */,
 				A51EF62815CD1F0500BC54FC /* AudioToolbox.framework in Frameworks */,
@@ -153,6 +162,21 @@
 		A51EF63415CD3BA000BC54FC /* res */ = {
 			isa = PBXGroup;
 			children = (
+				A58717D315C707EB00972EC9 /* yellow.png */,
+				A569325B15C83EC90082F8C2 /* SongListViewController.xib */,
+				A58717BF15C6E68E00972EC9 /* second.png */,
+				A58717C115C6E68E00972EC9 /* second@2x.png */,
+				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
+				A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */,
+				A58717C815C6E73400972EC9 /* icon.png */,
+				A58717C915C6E73400972EC9 /* icon@2x.png */,
+				A58717D015C6FDB500972EC9 /* ad@2x.png */,
+				A51EF62015CD1E5C00BC54FC /* AudioStreamer.h */,
+				A51EF62115CD1E5C00BC54FC /* AudioStreamer.m */,
+				A58717D215C707EB00972EC9 /* blue.png */,
+				A58717CE15C6ED8B00972EC9 /* Default@2x.png */,
+				A58717B815C6E68E00972EC9 /* first.png */,
+				A58717BA15C6E68E00972EC9 /* first@2x.png */,
 				A51EF64315CD633F00BC54FC /* btn_back.png */,
 				A51EF64415CD633F00BC54FC /* btn_like.png */,
 				A51EF63F15CD621D00BC54FC /* play_bg.png */,
@@ -200,12 +224,6 @@
 		A587179115C6E68D00972EC9 = {
 			isa = PBXGroup;
 			children = (
-				A51EF63115CD247900BC54FC /* QuartzCore.framework */,
-				A51EF62715CD1F0500BC54FC /* AudioToolbox.framework */,
-				A51EF62515CD1EC900BC54FC /* CoreAudio.framework */,
-				A51EF62315CD1E8F00BC54FC /* CFNetwork.framework */,
-				A51EF61B15CCEC4700BC54FC /* AVFoundation.framework */,
-				A569325F15C850290082F8C2 /* MediaPlayer.framework */,
 				A58717A615C6E68D00972EC9 /* KoreaMusic */,
 				A587179F15C6E68D00972EC9 /* Frameworks */,
 				A587179D15C6E68D00972EC9 /* Products */,
@@ -223,6 +241,13 @@
 		A587179F15C6E68D00972EC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5BC05F815CDA7F000915367 /* CoreText.framework */,
+				A51EF63115CD247900BC54FC /* QuartzCore.framework */,
+				A51EF62715CD1F0500BC54FC /* AudioToolbox.framework */,
+				A51EF62515CD1EC900BC54FC /* CoreAudio.framework */,
+				A51EF62315CD1E8F00BC54FC /* CFNetwork.framework */,
+				A51EF61B15CCEC4700BC54FC /* AVFoundation.framework */,
+				A569325F15C850290082F8C2 /* MediaPlayer.framework */,
 				A58717A015C6E68D00972EC9 /* UIKit.framework */,
 				A58717A215C6E68D00972EC9 /* Foundation.framework */,
 				A58717A415C6E68D00972EC9 /* CoreGraphics.framework */,
@@ -233,34 +258,10 @@
 		A58717A615C6E68D00972EC9 /* KoreaMusic */ = {
 			isa = PBXGroup;
 			children = (
-				A58717D015C6FDB500972EC9 /* ad@2x.png */,
-				A51EF62015CD1E5C00BC54FC /* AudioStreamer.h */,
-				A51EF62115CD1E5C00BC54FC /* AudioStreamer.m */,
-				A58717D215C707EB00972EC9 /* blue.png */,
-				A58717CE15C6ED8B00972EC9 /* Default@2x.png */,
-				A58717B815C6E68E00972EC9 /* first.png */,
-				A58717BA15C6E68E00972EC9 /* first@2x.png */,
+				A5BC05F115CDA61A00915367 /* classes */,
 				A569325E15C84D130082F8C2 /* hprose */,
-				A58717C815C6E73400972EC9 /* icon.png */,
-				A58717C915C6E73400972EC9 /* icon@2x.png */,
-				A58717B215C6E68D00972EC9 /* MainStoryboard.storyboard */,
-				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
-				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
-				A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */,
-				A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */,
-				A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */,
-				A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */,
-				A5BA8A4415CC322F003F76F2 /* PlayerViewController.h */,
-				A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */,
-				A5BA8A4615CC322F003F76F2 /* PlayerViewController.xib */,
 				A51EF63415CD3BA000BC54FC /* res */,
-				A58717BF15C6E68E00972EC9 /* second.png */,
-				A58717C115C6E68E00972EC9 /* second@2x.png */,
-				A569325915C83EC90082F8C2 /* SongListViewController.h */,
-				A569325A15C83EC90082F8C2 /* SongListViewController.m */,
-				A569325B15C83EC90082F8C2 /* SongListViewController.xib */,
 				A58717A715C6E68D00972EC9 /* Supporting Files */,
-				A58717D315C707EB00972EC9 /* yellow.png */,
 			);
 			path = KoreaMusic;
 			sourceTree = "<group>";
@@ -274,6 +275,27 @@
 				A58717AE15C6E68D00972EC9 /* KoreaMusic-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5BC05F115CDA61A00915367 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5BC05FA15CDAAEB00915367 /* LRCLayer.h */,
+				A5BC05FB15CDAAEB00915367 /* LRCLayer.m */,
+				A5BC05FC15CDAAEB00915367 /* LRCParser.h */,
+				A5BC05FD15CDAAEB00915367 /* LRCParser.m */,
+				A58717AF15C6E68D00972EC9 /* PHPOXAppDelegate.h */,
+				A58717B015C6E68D00972EC9 /* PHPOXAppDelegate.m */,
+				A58717B515C6E68D00972EC9 /* PHPOXFirstViewController.h */,
+				A58717B615C6E68D00972EC9 /* PHPOXFirstViewController.m */,
+				A58717BC15C6E68E00972EC9 /* PHPOXSecondViewController.h */,
+				A58717BD15C6E68E00972EC9 /* PHPOXSecondViewController.m */,
+				A5BA8A4415CC322F003F76F2 /* PlayerViewController.h */,
+				A5BA8A4515CC322F003F76F2 /* PlayerViewController.m */,
+				A569325915C83EC90082F8C2 /* SongListViewController.h */,
+				A569325A15C83EC90082F8C2 /* SongListViewController.m */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +416,8 @@
 				A569325C15C83EC90082F8C2 /* SongListViewController.m in Sources */,
 				A5BA8A4715CC322F003F76F2 /* PlayerViewController.m in Sources */,
 				A51EF62215CD1E5C00BC54FC /* AudioStreamer.m in Sources */,
+				A5BC05FE15CDAAEB00915367 /* LRCLayer.m in Sources */,
+				A5BC05FF15CDAAEB00915367 /* LRCParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +492,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/AudioTest\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
 				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";
@@ -480,6 +509,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/AudioTest\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KoreaMusic/KoreaMusic-Prefix.pch";
 				INFOPLIST_FILE = "KoreaMusic/KoreaMusic-Info.plist";

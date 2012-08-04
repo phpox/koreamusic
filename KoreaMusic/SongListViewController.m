@@ -17,6 +17,12 @@
 @synthesize songarr;
 @synthesize playerController;
 @synthesize loading;
+@synthesize tbSongList;
+
+-(BOOL) respondsToSelector:(SEL)aSelector {
+    printf("SELECTOR: %s\n", [NSStringFromSelector(aSelector) UTF8String]);
+    return [super respondsToSelector:aSelector];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,25 +41,12 @@
     hpClient = [[client useService:@protocol(Phpox)] retain];
 }
 
--(void) getUserListCallback:(NSArray *)result
-{
-    songarr = result;
-    [songarr retain];
-    if([result count] > 0)
-    {
-        for (NSDictionary * row in result)
-        {
-            NSLog(@"%@",[row objectForKey:@"name"]);
-            //NSString *ids = [NSString stringWithFormat:@"%@",[row objectForKey:@"id"]];
-        }
-    }
-}
-
 - (void)viewDidUnload
 {
     [self setHpClient:nil];
     self.playerController = nil;
     [self setLoading:nil];
+    [self setTbSongList:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -70,7 +63,6 @@
 //返回行数
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return 4;
     return [songarr count];
 }
 
@@ -99,11 +91,20 @@
     
 	return cell;
 }
+
+-(void)initSongList
+{
+    [tbSongList reloadData];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [loading startAnimating];
-    NSUInteger row = [indexPath row];
-    [hpClient getSongInfo:row+1 selector:@selector(playSong:) delegate:self];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *str = [[NSString alloc] initWithFormat:@"%@",[cell reuseIdentifier]];
+    NSUInteger row = [str intValue];
+    NSLog(@"%d",row);
+    [hpClient getSongInfo:row selector:@selector(playSong:) delegate:self];
 }
 
 -(void)playSong:(NSMutableDictionary *)result
@@ -140,6 +141,7 @@
     [hpClient release];
     //[songarr release];
     [loading release];
+    [tbSongList release];
     [super dealloc];
 }
 

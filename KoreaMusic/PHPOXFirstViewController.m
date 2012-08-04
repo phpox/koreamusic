@@ -24,6 +24,10 @@
 @synthesize loading;
 @synthesize searchText;
 
+
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -120,12 +124,8 @@
     [self.view addSubview:childController.view];
     if([result count] > 0)
     {
-        for (NSDictionary * row in result)
-        {
-            NSLog(@"%@",[row objectForKey:@"name"]);
-            //NSString *ids = [NSString stringWithFormat:@"%@",[row objectForKey:@"id"]];
-        }
-        songarr = result;
+        childController.songarr = result;
+        [childController initSongList];
     }
     [loading stopAnimating];
     //[[[UIAlertView alloc] initWithTitle:@"提示信息" message:[result description] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
@@ -133,10 +133,10 @@
 
 - (IBAction)showPlayer:(id)sender
 {
-    if (playerController == nil) {
-        playerController = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    if (childController.playerController == nil) {
+        childController.playerController = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
     }
-    [self.view addSubview:playerController.view];
+    [self.view addSubview:childController.playerController.view];
 }
 
 /*取消按钮*/
