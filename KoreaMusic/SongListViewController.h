@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>  
 #import "Hprose.h"
 #import "PlayerViewController.h"
 
@@ -24,6 +23,7 @@
 @property (retain, nonatomic) IBOutlet HproseClient *hpClient;
 @property (retain, nonatomic) IBOutlet NSArray *songarr;
 @property (strong, nonatomic) PlayerViewController *playerController;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 - (IBAction)bkMain:(id)sender;
-
+- (IBAction)showPlayer:(id)sender;
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Hprose.h"
 #import "SongListViewController.h"
+#import "PlayerViewController.h"
 
 @protocol Phpox
 -(oneway void) getSongList:(int)id selector:(SEL)selector delegate:(id)delegate;
@@ -26,9 +27,12 @@
 @property (strong, nonatomic) NSArray *listDataIntro;
 @property (retain, nonatomic) IBOutlet HproseClient *hpClient;
 @property (strong, nonatomic) SongListViewController *childController;
+@property (strong, nonatomic) PlayerViewController *playerController;
 @property (retain, nonatomic) NSArray *songarr;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loading;
-
+@property (retain, nonatomic) IBOutlet UISearchBar *searchText;
+- (IBAction)backgroundTap:(id)sender;
+- (IBAction)showPlayer:(id)sender;
 -(void)bkOnlineList;
 
 @end

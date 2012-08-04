@@ -16,6 +16,7 @@
 @synthesize hpClient;
 @synthesize songarr;
 @synthesize playerController;
+@synthesize loading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +53,7 @@
 {
     [self setHpClient:nil];
     self.playerController = nil;
+    [self setLoading:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,6 +101,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [loading startAnimating];
     NSUInteger row = [indexPath row];
     [hpClient getSongInfo:row+1 selector:@selector(playSong:) delegate:self];
 }
@@ -113,6 +116,17 @@
     }
     [playerController.songarr removeAllObjects];
     playerController.songarr = result;
+    [playerController initSong];
+    [loading stopAnimating];
+    [self.view addSubview:playerController.view];
+}
+
+- (IBAction)showPlayer:(id)sender
+{
+    if (playerController == nil) {
+        playerController = [[PlayerViewController alloc]
+                            initWithNibName:@"PlayerViewController" bundle:nil];
+    }
     [self.view addSubview:playerController.view];
 }
 
@@ -125,6 +139,7 @@
 - (void)dealloc {
     [hpClient release];
     //[songarr release];
+    [loading release];
     [super dealloc];
 }
 

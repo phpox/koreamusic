@@ -19,8 +19,10 @@
 @synthesize listDataIntro;
 @synthesize hpClient;
 @synthesize childController;
+@synthesize playerController;
 @synthesize songarr;
 @synthesize loading;
+@synthesize searchText;
 
 - (void)viewDidLoad
 {
@@ -44,8 +46,10 @@
     self.listData = nil;
     self.listDataIntro = nil;
     self.childController = nil;
+    self.playerController = nil;
     [self setHpClient:nil];
     [self setLoading:nil];
+    [self setSearchText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -92,7 +96,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [loading startAnimating];
-    [hpClient getSongList:1 selector:@selector(getUserListCallback:) delegate:self];
+    int row = [indexPath row];
+    [hpClient getSongList:row+1 selector:@selector(getUserListCallback:) delegate:self];
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [searchText resignFirstResponder];
 }
 
 -(void)bkOnlineList
@@ -122,10 +131,48 @@
     //[[[UIAlertView alloc] initWithTitle:@"提示信息" message:[result description] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
 }
 
+- (IBAction)showPlayer:(id)sender
+{
+    if (playerController == nil) {
+        playerController = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    }
+    [self.view addSubview:playerController.view];
+}
+
+/*取消按钮*/
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    searchBar.showsCancelButton = NO;
+    [searchBar resignFirstResponder];
+    [self doSearch:searchBar];
+}
+
+/*键盘搜索按钮*/
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    [self doSearch:searchBar];
+}
+
+/*搜索*/
+- (void)doSearch:(UISearchBar *)searchBar{
+    //...
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    searchBar.showsCancelButton = YES;
+    for (id cc in [searchBar subviews]) {
+        if ([cc isKindOfClass:[UIButton class]]) {
+            UIButton *button = (UIButton *)cc;
+            [button setTitle:@"取消" forState:UIControlStateNormal];
+        }
+    }
+}
+
 - (void)dealloc {
     [hpClient release];
     //[songarr release];
     [loading release];
+    [searchText release];
     [super dealloc];
 }
 @end
