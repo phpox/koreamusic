@@ -19,10 +19,10 @@
 @synthesize loading;
 @synthesize tbSongList;
 
--(BOOL) respondsToSelector:(SEL)aSelector {
+/*-(BOOL) respondsToSelector:(SEL)aSelector {
     printf("SELECTOR: %s\n", [NSStringFromSelector(aSelector) UTF8String]);
     return [super respondsToSelector:aSelector];
-}
+}*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
